@@ -13,7 +13,7 @@ struct ContentView: View {
                 mainContentView
                 footerView
             }
-            .navigationTitle("SwiftUI App")
+            .navigationTitle("Paws in Balance")
         }
     }
 }
@@ -22,7 +22,7 @@ extension ContentView {
     // 4. Individual component views
 
     var headerView: some View {
-        Text("Header")
+        Text("Account Login")
             .font(.largeTitle)
             .padding()
     }
