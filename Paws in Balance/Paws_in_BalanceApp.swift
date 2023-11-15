@@ -7,9 +7,13 @@
 
 import SwiftUI
 
+import Firebase
+
 @main
 struct Paws_in_BalanceApp: App {
+    
     let persistenceController = PersistenceController.shared
+    
 
     var body: some Scene {
         WindowGroup {
