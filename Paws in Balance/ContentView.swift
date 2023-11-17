@@ -1,60 +1,46 @@
 import SwiftUI
 
 struct ContentView: View {
-    // 1. Properties (State, Binding, ObservedObject, etc.)
-    @State private var isButtonPressed = false
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var isRegistering: Bool = false
 
     var body: some View {
-        // 2. Main layout
-        NavigationView {
+        if authViewModel.isSignedIn {
+            MainView()
+        } else {
             VStack {
-                // 3. Subviews or components
-                headerView
-                mainContentView
-                footerView
-            }
-            .navigationTitle("Paws in Balance")
-        }
-    }
-}
-
-extension ContentView {
-    // 4. Individual component views
-
-    var headerView: some View {
-        Text("Account Login")
-            .font(.largeTitle)
-            .padding()
-    }
-
-    var mainContentView: some View {
-        VStack {
-            Text("Main Content")
-                .font(.title)
-                .padding()
-
-            Button(action: {
-                isButtonPressed.toggle()
-            }) {
-                Text(isButtonPressed ? "Button Pressed" : "Press Me")
+                TextField("Email", text: $email)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-        }
-    }
+                
+                SecureField("Password", text: $password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
 
-    var footerView: some View {
-        Text("Footer")
-            .font(.caption)
+                if isRegistering {
+                    Button("Register") {
+                        authViewModel.signUp(email: email, password: password)
+                    }
+                } else {
+                    Button("Login") {
+                        authViewModel.signIn(email: email, password: password)
+                    }
+
+                    Button("Register") {
+                        isRegistering = true
+                    }
+                }
+            }
             .padding()
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct MainView: View {
+    var body: some View {
+        Text("Welcome to Paws in Balance")
     }
 }
 
