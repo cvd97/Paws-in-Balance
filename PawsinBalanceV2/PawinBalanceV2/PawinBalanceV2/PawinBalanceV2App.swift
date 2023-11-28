@@ -8,11 +8,7 @@ import SwiftUI
 import Firebase
 
 @main
-struct PawsInBalanceApp: App {
-    init() {
-        FirebaseApp.configure()
-    }
-
+struct dogApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

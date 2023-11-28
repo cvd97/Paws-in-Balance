@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9235F09F2B0D4F47000191E6 /* UserInfoForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9235F09E2B0D4F47000191E6 /* UserInfoForm.swift */; };
+		9235F0A12B0D4F80000191E6 /* DogInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9235F0A02B0D4F80000191E6 /* DogInfoView.swift */; };
 		9243BB2F2B067DD100961F89 /* PawinBalanceV2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BB2E2B067DD100961F89 /* PawinBalanceV2App.swift */; };
 		9243BB312B067DD100961F89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BB302B067DD100961F89 /* ContentView.swift */; };
 		9243BB352B067DD200961F89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9243BB342B067DD200961F89 /* Assets.xcassets */; };
 		9243BB382B067DD200961F89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9243BB372B067DD200961F89 /* Preview Assets.xcassets */; };
-		9243BB422B067DD200961F89 /* PawinBalanceV2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BB412B067DD200961F89 /* PawinBalanceV2Tests.swift */; };
-		9243BB4C2B067DD200961F89 /* PawinBalanceV2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BB4B2B067DD200961F89 /* PawinBalanceV2UITests.swift */; };
-		9243BB4E2B067DD200961F89 /* PawinBalanceV2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BB4D2B067DD200961F89 /* PawinBalanceV2UITestsLaunchTests.swift */; };
 		9243BB5B2B067F8500961F89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9243BB5A2B067F8500961F89 /* GoogleService-Info.plist */; };
 		9243BB5F2B0680F800961F89 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9243BB5E2B0680F800961F89 /* FirebaseAnalytics */; };
 		9243BB612B0680F800961F89 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 9243BB602B0680F800961F89 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -42,10 +41,8 @@
 		9243BB8F2B0680F800961F89 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9243BB8E2B0680F800961F89 /* FirebaseRemoteConfigSwift */; };
 		9243BB912B0680F800961F89 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9243BB902B0680F800961F89 /* FirebaseStorage */; };
 		9243BB932B0680F800961F89 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9243BB922B0680F800961F89 /* FirebaseStorageCombine-Community */; };
-		9243BB9B2B06CEE500961F89 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BB9A2B06CEE500961F89 /* AuthViewModel.swift */; };
-		9243BB9D2B06CF0300961F89 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BB9C2B06CF0300961F89 /* SignInView.swift */; };
-		9243BB9F2B06D51700961F89 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BB9E2B06D51700961F89 /* UserInfo.swift */; };
-		9243BBA12B06D55C00961F89 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BBA02B06D55C00961F89 /* UserInfoView.swift */; };
+		925985682B11096800EDDD43 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925985672B11096800EDDD43 /* UserData.swift */; };
+		92EC81C22B0D592D00DA354E /* DogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC81C12B0D592D00DA354E /* DogData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,21 +63,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9235F09E2B0D4F47000191E6 /* UserInfoForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoForm.swift; sourceTree = "<group>"; };
+		9235F0A02B0D4F80000191E6 /* DogInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInfoView.swift; sourceTree = "<group>"; };
 		9243BB2B2B067DD100961F89 /* PawinBalanceV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawinBalanceV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9243BB2E2B067DD100961F89 /* PawinBalanceV2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawinBalanceV2App.swift; sourceTree = "<group>"; };
 		9243BB302B067DD100961F89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9243BB342B067DD200961F89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9243BB372B067DD200961F89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9243BB3D2B067DD200961F89 /* PawinBalanceV2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawinBalanceV2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9243BB412B067DD200961F89 /* PawinBalanceV2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawinBalanceV2Tests.swift; sourceTree = "<group>"; };
 		9243BB472B067DD200961F89 /* PawinBalanceV2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawinBalanceV2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9243BB4B2B067DD200961F89 /* PawinBalanceV2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawinBalanceV2UITests.swift; sourceTree = "<group>"; };
-		9243BB4D2B067DD200961F89 /* PawinBalanceV2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawinBalanceV2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9243BB5A2B067F8500961F89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9243BB9A2B06CEE500961F89 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		9243BB9C2B06CF0300961F89 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		9243BB9E2B06D51700961F89 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		9243BBA02B06D55C00961F89 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		925985672B11096800EDDD43 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		92EC81C12B0D592D00DA354E /* DogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,12 +129,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		921B79252B1669C7009E619C /* UserViews */ = {
+			isa = PBXGroup;
+			children = (
+				9235F09E2B0D4F47000191E6 /* UserInfoForm.swift */,
+				925985672B11096800EDDD43 /* UserData.swift */,
+			);
+			path = UserViews;
+			sourceTree = "<group>";
+		};
+		921B79262B167436009E619C /* DogViews */ = {
+			isa = PBXGroup;
+			children = (
+				9235F0A02B0D4F80000191E6 /* DogInfoView.swift */,
+				92EC81C12B0D592D00DA354E /* DogData.swift */,
+			);
+			path = DogViews;
+			sourceTree = "<group>";
+		};
 		9243BB222B067DD100961F89 = {
 			isa = PBXGroup;
 			children = (
 				9243BB2D2B067DD100961F89 /* PawinBalanceV2 */,
-				9243BB402B067DD200961F89 /* PawinBalanceV2Tests */,
-				9243BB4A2B067DD200961F89 /* PawinBalanceV2UITests */,
 				9243BB2C2B067DD100961F89 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -160,10 +170,8 @@
 			children = (
 				9243BB2E2B067DD100961F89 /* PawinBalanceV2App.swift */,
 				9243BB302B067DD100961F89 /* ContentView.swift */,
-				9243BB9A2B06CEE500961F89 /* AuthViewModel.swift */,
-				9243BB9E2B06D51700961F89 /* UserInfo.swift */,
-				9243BBA02B06D55C00961F89 /* UserInfoView.swift */,
-				9243BB9C2B06CF0300961F89 /* SignInView.swift */,
+				921B79252B1669C7009E619C /* UserViews */,
+				921B79262B167436009E619C /* DogViews */,
 				9243BB342B067DD200961F89 /* Assets.xcassets */,
 				9243BB5A2B067F8500961F89 /* GoogleService-Info.plist */,
 				9243BB362B067DD200961F89 /* Preview Content */,
@@ -177,23 +185,6 @@
 				9243BB372B067DD200961F89 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		9243BB402B067DD200961F89 /* PawinBalanceV2Tests */ = {
-			isa = PBXGroup;
-			children = (
-				9243BB412B067DD200961F89 /* PawinBalanceV2Tests.swift */,
-			);
-			path = PawinBalanceV2Tests;
-			sourceTree = "<group>";
-		};
-		9243BB4A2B067DD200961F89 /* PawinBalanceV2UITests */ = {
-			isa = PBXGroup;
-			children = (
-				9243BB4B2B067DD200961F89 /* PawinBalanceV2UITests.swift */,
-				9243BB4D2B067DD200961F89 /* PawinBalanceV2UITestsLaunchTests.swift */,
-			);
-			path = PawinBalanceV2UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,12 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9235F09F2B0D4F47000191E6 /* UserInfoForm.swift in Sources */,
+				925985682B11096800EDDD43 /* UserData.swift in Sources */,
+				9235F0A12B0D4F80000191E6 /* DogInfoView.swift in Sources */,
+				92EC81C22B0D592D00DA354E /* DogData.swift in Sources */,
 				9243BB312B067DD100961F89 /* ContentView.swift in Sources */,
 				9243BB2F2B067DD100961F89 /* PawinBalanceV2App.swift in Sources */,
-				9243BB9D2B06CF0300961F89 /* SignInView.swift in Sources */,
-				9243BBA12B06D55C00961F89 /* UserInfoView.swift in Sources */,
-				9243BB9F2B06D51700961F89 /* UserInfo.swift in Sources */,
-				9243BB9B2B06CEE500961F89 /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +364,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9243BB422B067DD200961F89 /* PawinBalanceV2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,8 +371,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9243BB4C2B067DD200961F89 /* PawinBalanceV2UITests.swift in Sources */,
-				9243BB4E2B067DD200961F89 /* PawinBalanceV2UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
