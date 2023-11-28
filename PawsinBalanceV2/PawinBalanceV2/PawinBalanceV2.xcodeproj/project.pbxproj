@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921B79292B1684CA009E619C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B79282B1684CA009E619C /* AuthViewModel.swift */; };
+		921B792B2B1684EB009E619C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B792A2B1684EB009E619C /* SignInView.swift */; };
 		9235F09F2B0D4F47000191E6 /* UserInfoForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9235F09E2B0D4F47000191E6 /* UserInfoForm.swift */; };
 		9235F0A12B0D4F80000191E6 /* DogInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9235F0A02B0D4F80000191E6 /* DogInfoView.swift */; };
 		9243BB2F2B067DD100961F89 /* PawinBalanceV2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BB2E2B067DD100961F89 /* PawinBalanceV2App.swift */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		921B79282B1684CA009E619C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		921B792A2B1684EB009E619C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		9235F09E2B0D4F47000191E6 /* UserInfoForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoForm.swift; sourceTree = "<group>"; };
 		9235F0A02B0D4F80000191E6 /* DogInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInfoView.swift; sourceTree = "<group>"; };
 		9243BB2B2B067DD100961F89 /* PawinBalanceV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawinBalanceV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,9 +151,19 @@
 			path = DogViews;
 			sourceTree = "<group>";
 		};
+		921B79272B1684A9009E619C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				921B79282B1684CA009E619C /* AuthViewModel.swift */,
+				921B792A2B1684EB009E619C /* SignInView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		9243BB222B067DD100961F89 = {
 			isa = PBXGroup;
 			children = (
+				921B79272B1684A9009E619C /* Authentication */,
 				9243BB2D2B067DD100961F89 /* PawinBalanceV2 */,
 				9243BB2C2B067DD100961F89 /* Products */,
 			);
@@ -354,8 +368,10 @@
 				9235F09F2B0D4F47000191E6 /* UserInfoForm.swift in Sources */,
 				925985682B11096800EDDD43 /* UserData.swift in Sources */,
 				9235F0A12B0D4F80000191E6 /* DogInfoView.swift in Sources */,
+				921B79292B1684CA009E619C /* AuthViewModel.swift in Sources */,
 				92EC81C22B0D592D00DA354E /* DogData.swift in Sources */,
 				9243BB312B067DD100961F89 /* ContentView.swift in Sources */,
+				921B792B2B1684EB009E619C /* SignInView.swift in Sources */,
 				9243BB2F2B067DD100961F89 /* PawinBalanceV2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

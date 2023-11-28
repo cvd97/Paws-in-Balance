@@ -6,21 +6,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    
+    @StateObject var authViewModel = AuthViewModel()
+
     var body: some View {
-        VStack {
-            
-            Text("Paws in Balance")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            
-            
-            ScrollView {
-                UserInfoForm()
-                DogInfoView()
+        if authViewModel.isAuthenticated {
+            VStack {
                 
+                Text("Paws in Balance")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                
+                ScrollView {
+                    UserInfoForm()
+                    DogInfoView()
+                    Button("Logout") {
+                                    authViewModel.signOut()
+                                }
+                                .padding()
+                                .background(Color.red)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
+                    
+                }
             }
+        }else {
+            SignInView(authViewModel: authViewModel)
         }
     }
 }
