@@ -23,7 +23,8 @@ struct SignInView: View {
                 .cornerRadius(16)
                 .padding(14)
             Button("Sign In") {
-                authViewModel.signIn(email: email, password: password)
+                authViewModel.signIn(email: email, password: password) {
+                }
             }
             .font(.title2)
             .frame(width: 140, height: 44)

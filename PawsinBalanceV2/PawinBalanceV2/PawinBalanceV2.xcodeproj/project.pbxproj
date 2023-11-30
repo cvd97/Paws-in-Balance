@@ -47,6 +47,8 @@
 		9243BB932B0680F800961F89 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9243BB922B0680F800961F89 /* FirebaseStorageCombine-Community */; };
 		925985682B11096800EDDD43 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925985672B11096800EDDD43 /* UserData.swift */; };
 		92623D102B17BCC5002679C8 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 92623D0F2B17BCC5002679C8 /* OpenAI */; };
+		92DCD54F2B19511400ADDD37 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DCD54E2B19511400ADDD37 /* XCTest.framework */; platformFilter = ios; };
+		92DCD5502B19511400ADDD37 /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DCD54E2B19511400ADDD37 /* XCTest.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92EC81C22B0D592D00DA354E /* DogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC81C12B0D592D00DA354E /* DogData.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		92DCD5512B19511400ADDD37 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92DCD5502B19511400ADDD37 /* XCTest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		921B79282B1684CA009E619C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		921B792A2B1684EB009E619C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -83,6 +99,7 @@
 		9243BB472B067DD200961F89 /* PawinBalanceV2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawinBalanceV2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9243BB5A2B067F8500961F89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		925985672B11096800EDDD43 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		92DCD54E2B19511400ADDD37 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		92EC81C12B0D592D00DA354E /* DogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DCD54F2B19511400ADDD37 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +202,7 @@
 				921B79272B1684A9009E619C /* Authentication */,
 				921B792C2B168FB2009E619C /* API */,
 				9243BB2C2B067DD100961F89 /* Products */,
+				92DCD54D2B19511400ADDD37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +234,14 @@
 				9243BB372B067DD200961F89 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92DCD54D2B19511400ADDD37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92DCD54E2B19511400ADDD37 /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +301,7 @@
 				9243BB392B067DD200961F89 /* Sources */,
 				9243BB3A2B067DD200961F89 /* Frameworks */,
 				9243BB3B2B067DD200961F89 /* Resources */,
+				92DCD5512B19511400ADDD37 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -318,6 +346,7 @@
 					};
 					9243BB3C2B067DD200961F89 = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 						TestTargetID = 9243BB2A2B067DD100961F89;
 					};
 					9243BB462B067DD200961F89 = {
@@ -610,6 +639,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2KK23FK97D;
@@ -619,6 +649,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CS3203.PawinBalanceV2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "API/PawinBalanceV2Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PawinBalanceV2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PawinBalanceV2";
@@ -630,6 +662,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2KK23FK97D;
@@ -639,6 +672,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CS3203.PawinBalanceV2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "API/PawinBalanceV2Tests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PawinBalanceV2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PawinBalanceV2";

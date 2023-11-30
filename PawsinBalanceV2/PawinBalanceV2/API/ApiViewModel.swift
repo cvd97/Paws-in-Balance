@@ -5,7 +5,6 @@
 //  Created by Cody Van Dyke on 11/28/23.
 //
 import SwiftUI
-import Firebase
 import FirebaseFirestore
 
 class ApiViewModel: ObservableObject {
@@ -57,5 +56,15 @@ class ApiViewModel: ObservableObject {
                 }
             }
         }
-}
-
+    
+    func fetchPreviousSchedule(userId: String) {
+            let db = Firestore.firestore()
+            db.collection("schedules").document(userId).getDocument { [weak self] document, error in
+                if let error = error {
+                    print("Error fetching schedule: \(error.localizedDescription)")
+                } else if let document = document, document.exists, let data = document.data() {
+                    self?.generatedText = data["schedule"] as? String ?? ""
+                }
+            }
+        }
+    }
