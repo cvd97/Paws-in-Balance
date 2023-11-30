@@ -4,6 +4,7 @@
 //
 //  Created by Cody Van Dyke on 11/16/23.
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
     @StateObject var authViewModel = AuthViewModel()
@@ -53,7 +54,9 @@ struct ContentView: View {
                     
                     if isTapped {
                         Button("Save Schedule") {
-                            //Action to save schedule in firestore
+                            if let userId = Auth.auth().currentUser?.uid {
+                                apiViewModel.saveScheduleToFirestore(userId: userId, schedule: apiViewModel.generatedText)
+                            }
                         }
                         .font(.title2)
                         .frame(width: 340, height: 84)
@@ -62,7 +65,7 @@ struct ContentView: View {
                         .foregroundColor(.black)
                         .padding(.bottom, 80)
                     }
-
+                    
                     
                     Button("Logout") {
                         authViewModel.signOut()

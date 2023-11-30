@@ -14,7 +14,7 @@ class ApiViewModel: ObservableObject {
     private let openAIService = OpenAIService()
     private var db = Firestore.firestore()
     
-    
+    // generate the schdule in the format need to get proper resonse from api
     func generateSchedule(for userString: String, dogString: String) {
         let formattedPrompt = """
     Based on the following details, please create a comprehensive and detailed weekly care schedule for a dog:
@@ -46,6 +46,16 @@ class ApiViewModel: ObservableObject {
         }
     }
     
-    
+    // save the schedule to the users account
+    func saveScheduleToFirestore(userId: String, schedule: String) {
+            let db = Firestore.firestore()
+            db.collection("schedules").document(userId).setData(["schedule": schedule]) { error in
+                if let error = error {
+                    print("Error saving schedule to Firestore: \(error.localizedDescription)")
+                } else {
+                    print("Schedule successfully saved.")
+                }
+            }
+        }
 }
 
