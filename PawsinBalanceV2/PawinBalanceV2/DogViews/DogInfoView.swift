@@ -8,7 +8,7 @@ import SwiftUI
 
 struct DogInfoView: View {
     @State private var dogData = DogData()
-    @State private var dogDataPhrase = ""
+    @Binding var dogDataPhrase: String
     @State private var isFormPresented = true
     var gradient: Array<Color> = [Color(#colorLiteral(red: 0.7294117647, green: 0.4588235294, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.2235294118, green: 0.07450980392, blue: 0.7215686275, alpha: 1))]
     
@@ -32,7 +32,7 @@ struct DogInfoView: View {
                 .frame(width: isTapped ? 300 : 80 )
                 .frame(height: isTapped ? nil : 80)
                 .foregroundStyle(.primary, .white)
-                .padding(10)
+                .padding(15)
                 .overlay(
                     RoundedRectangle(cornerRadius: 15)
                         .strokeBorder(linearGradient)
@@ -47,10 +47,11 @@ struct DogInfoView: View {
     
     
     var add: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 15) {
             Image(systemName: isTapped ? "dog" : "plus.diamond.fill")
-                .frame(width: 54)
-                .frame(height: 54)
+                .font(.largeTitle)
+                .frame(width: 84)
+                .frame(height: 84)
                 .background(LinearGradient(gradient: Gradient(colors: gradient), startPoint: .leading, endPoint: .trailing))
                 .cornerRadius(16)
                 .foregroundColor(.white)
@@ -83,7 +84,7 @@ struct DogInfoView: View {
                                 .padding(10)
                         }
                         Button("Save") {
-                            dogDataPhrase = formatDogDataPhrase(dogData: dogData)
+                            dogDataPhrase = "Name: \(dogData.name) Age: \(dogData.age) Breed \(dogData.breed) Weight of \(dogData.weight) Amount of food \(dogData.foodAmount) Feeding Frequency \(dogData.foodFrequency)"
                             isFormPresented = false // Close form
                             // Additional actions like saving to database can be added here
                         }
@@ -108,15 +109,4 @@ struct DogInfoView: View {
             }
         }
     }
-}
-
-private func formatDogDataPhrase(dogData: DogData) -> String {
-    
-    var dogPhrase: String = "Name: \(dogData.name) Age: \(dogData.age) Breed \(dogData.breed) Weight of \(dogData.weight) Amount of food \(dogData.foodAmount) Feeding Frequency \(dogData.foodFrequency) "
-    
-    
-    return dogPhrase
-}
-#Preview {
-    DogInfoView()
 }

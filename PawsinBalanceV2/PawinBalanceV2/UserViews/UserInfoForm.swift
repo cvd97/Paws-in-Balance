@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserInfoForm: View {
     @State private var userData = UserData()
-    @State private var userDataPhrase = ""
+    @Binding var userDataPhrase: String
     @State private var isFormPresented = true
     var gradient: Array<Color> = [Color(#colorLiteral(red: 0.7294117647, green: 0.4588235294, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.2235294118, green: 0.07450980392, blue: 0.7215686275, alpha: 1))]
     
@@ -27,6 +27,8 @@ struct UserInfoForm: View {
                     TextField("Job Title", text: $userData.jobTitle)
                         .padding(10)
                     TextField("Hours worked per week", text: $userData.averageHours)
+                        .padding(10)
+                    TextField("Shift: i.e. 8am - 5pm", text: $userData.shift)
                         .padding(10)
                     Button("Save") {
                         userDataPhrase = formatUserDataPhrase(userData: userData)
@@ -60,10 +62,4 @@ private func formatUserDataPhrase(userData: UserData) -> String {
 }
 var linearGradient: LinearGradient {
     LinearGradient(colors: [.clear, .primary.opacity(0.5), Color(#colorLiteral(red: 0.7294117647, green: 0.4588235294, blue: 1, alpha: 1))], startPoint: .topLeading, endPoint: .bottomTrailing)
-}
-
-struct UserInfoForm_Previews: PreviewProvider {
-    static var previews: some View {
-        UserInfoForm()
-    }
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		921B79292B1684CA009E619C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B79282B1684CA009E619C /* AuthViewModel.swift */; };
 		921B792B2B1684EB009E619C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B792A2B1684EB009E619C /* SignInView.swift */; };
+		921B792E2B16901C009E619C /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B792D2B16901C009E619C /* OpenAIService.swift */; };
+		921B79302B1691AF009E619C /* ApiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B792F2B1691AF009E619C /* ApiViewModel.swift */; };
 		9235F09F2B0D4F47000191E6 /* UserInfoForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9235F09E2B0D4F47000191E6 /* UserInfoForm.swift */; };
 		9235F0A12B0D4F80000191E6 /* DogInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9235F0A02B0D4F80000191E6 /* DogInfoView.swift */; };
 		9243BB2F2B067DD100961F89 /* PawinBalanceV2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243BB2E2B067DD100961F89 /* PawinBalanceV2App.swift */; };
@@ -44,6 +46,7 @@
 		9243BB912B0680F800961F89 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9243BB902B0680F800961F89 /* FirebaseStorage */; };
 		9243BB932B0680F800961F89 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9243BB922B0680F800961F89 /* FirebaseStorageCombine-Community */; };
 		925985682B11096800EDDD43 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925985672B11096800EDDD43 /* UserData.swift */; };
+		92623D102B17BCC5002679C8 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 92623D0F2B17BCC5002679C8 /* OpenAI */; };
 		92EC81C22B0D592D00DA354E /* DogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EC81C12B0D592D00DA354E /* DogData.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,8 @@
 /* Begin PBXFileReference section */
 		921B79282B1684CA009E619C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		921B792A2B1684EB009E619C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		921B792D2B16901C009E619C /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		921B792F2B1691AF009E619C /* ApiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiViewModel.swift; sourceTree = "<group>"; };
 		9235F09E2B0D4F47000191E6 /* UserInfoForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoForm.swift; sourceTree = "<group>"; };
 		9235F0A02B0D4F80000191E6 /* DogInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInfoView.swift; sourceTree = "<group>"; };
 		9243BB2B2B067DD100961F89 /* PawinBalanceV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawinBalanceV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +109,7 @@
 				9243BB7D2B0680F800961F89 /* FirebaseFunctions in Frameworks */,
 				9243BB932B0680F800961F89 /* FirebaseStorageCombine-Community in Frameworks */,
 				9243BB8D2B0680F800961F89 /* FirebaseRemoteConfig in Frameworks */,
+				92623D102B17BCC5002679C8 /* OpenAI in Frameworks */,
 				9243BB692B0680F800961F89 /* FirebaseAppDistribution-Beta in Frameworks */,
 				9243BB6D2B0680F800961F89 /* FirebaseAuthCombine-Community in Frameworks */,
 				9243BB8B2B0680F800961F89 /* FirebasePerformance in Frameworks */,
@@ -160,11 +166,23 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		921B792C2B168FB2009E619C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				921B792D2B16901C009E619C /* OpenAIService.swift */,
+				921B792F2B1691AF009E619C /* ApiViewModel.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		9243BB222B067DD100961F89 = {
 			isa = PBXGroup;
 			children = (
-				921B79272B1684A9009E619C /* Authentication */,
 				9243BB2D2B067DD100961F89 /* PawinBalanceV2 */,
+				921B79262B167436009E619C /* DogViews */,
+				921B79252B1669C7009E619C /* UserViews */,
+				921B79272B1684A9009E619C /* Authentication */,
+				921B792C2B168FB2009E619C /* API */,
 				9243BB2C2B067DD100961F89 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -184,8 +202,6 @@
 			children = (
 				9243BB2E2B067DD100961F89 /* PawinBalanceV2App.swift */,
 				9243BB302B067DD100961F89 /* ContentView.swift */,
-				921B79252B1669C7009E619C /* UserViews */,
-				921B79262B167436009E619C /* DogViews */,
 				9243BB342B067DD200961F89 /* Assets.xcassets */,
 				9243BB5A2B067F8500961F89 /* GoogleService-Info.plist */,
 				9243BB362B067DD200961F89 /* Preview Content */,
@@ -245,6 +261,7 @@
 				9243BB8E2B0680F800961F89 /* FirebaseRemoteConfigSwift */,
 				9243BB902B0680F800961F89 /* FirebaseStorage */,
 				9243BB922B0680F800961F89 /* FirebaseStorageCombine-Community */,
+				92623D0F2B17BCC5002679C8 /* OpenAI */,
 			);
 			productName = PawinBalanceV2;
 			productReference = 9243BB2B2B067DD100961F89 /* PawinBalanceV2.app */;
@@ -321,6 +338,7 @@
 			packageReferences = (
 				9243BB5C2B067FB100961F89 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				9243BB5D2B067FF600961F89 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				92623D0E2B17BCC5002679C8 /* XCRemoteSwiftPackageReference "OpenAI" */,
 			);
 			productRefGroup = 9243BB2C2B067DD100961F89 /* Products */;
 			projectDirPath = "";
@@ -366,9 +384,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9235F09F2B0D4F47000191E6 /* UserInfoForm.swift in Sources */,
+				921B792E2B16901C009E619C /* OpenAIService.swift in Sources */,
 				925985682B11096800EDDD43 /* UserData.swift in Sources */,
 				9235F0A12B0D4F80000191E6 /* DogInfoView.swift in Sources */,
 				921B79292B1684CA009E619C /* AuthViewModel.swift in Sources */,
+				921B79302B1691AF009E619C /* ApiViewModel.swift in Sources */,
 				92EC81C22B0D592D00DA354E /* DogData.swift in Sources */,
 				9243BB312B067DD100961F89 /* ContentView.swift in Sources */,
 				921B792B2B1684EB009E619C /* SignInView.swift in Sources */,
@@ -719,6 +739,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		92623D0E2B17BCC5002679C8 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -856,6 +884,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9243BB5C2B067FB100961F89 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		92623D0F2B17BCC5002679C8 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92623D0E2B17BCC5002679C8 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
